@@ -1,0 +1,22 @@
+<div class="container mt-4">
+    <h3>Add Room</h3>
+    <form action="/add-room" method="post">
+        <div class="mb-3">
+          <label class="form-label">Room Number</label>
+          <input type="text" class="form-control" id="name" name="name" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+          <label  class="form-label">Capacity</label>
+          <input type="text" class="form-control" id="cap" name="capacity">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Location (Floor)</label>
+            <input type="text" class="form-control" id="loc" name="location">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Status</label>
+            <input type="text" class="form-control" id="status" name="status" placeholder="default : Free">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div>

@@ -1,0 +1,38 @@
+<%- include("header") %>
+
+<div class="container mt-4">
+    <div class="mt-4" style="display: flex;">
+        <form action="/book-room-page" method="get">
+            <button type="submit" class="btn btn-primary">Book Room</button>
+        </form>
+        <form action="/admin-page" method="get" style="margin-left: auto;">
+            <button type="submit" class="btn btn-primary">Admin</button>
+        </form>
+    </div>
+    <div class="container mt-4">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Meeting Title</th>
+                <th scope="col">Capacity</th>
+                <th scope="col">Location</th>
+                <th scope="col">Status</th>
+                <th scope="col">Duration (hrs)</th>
+              </tr>
+            </thead>
+            <tbody>
+                <% for(let i = 0; i<allRooms.length; i++){ %>
+                    <tr>
+                      <th scope="row"><%= allRooms[i].name %></th>
+                      <td><%= allRooms[i].meetingTitle %></td>
+                      <td><%= allRooms[i].capacity %></td>
+                      <td><%= allRooms[i].location %></td>
+                      <td><%= allRooms[i].status %></td>
+                      <td><%= allRooms[i].duration %></td>
+                    </tr>
+                <% } %>
+            </tbody>
+          </table>
+    </div>
+</div>
